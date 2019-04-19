@@ -13,6 +13,12 @@
 		FAEC0A752269B154003AE443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A742269B154003AE443 /* Assets.xcassets */; };
 		FAEC0A782269B154003AE443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A762269B154003AE443 /* LaunchScreen.storyboard */; };
 		FAEC0A832269B154003AE443 /* StorytelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A822269B154003AE443 /* StorytelTests.swift */; };
+		FAEC0A992269BE34003AE443 /* StatusViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A972269BE34003AE443 /* StatusViewCell.swift */; };
+		FAEC0A9A2269BE34003AE443 /* StatusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A982269BE34003AE443 /* StatusViewCell.xib */; };
+		FAEC0A9F2269BE67003AE443 /* QueryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A9D2269BE67003AE443 /* QueryViewCell.swift */; };
+		FAEC0AA02269BE67003AE443 /* QueryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A9E2269BE67003AE443 /* QueryViewCell.xib */; };
+		FAEC0AA32269BE82003AE443 /* BookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AA12269BE82003AE443 /* BookViewCell.swift */; };
+		FAEC0AA42269BE82003AE443 /* BookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0AA22269BE82003AE443 /* BookViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		FAEC0A7E2269B154003AE443 /* StorytelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StorytelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC0A822269B154003AE443 /* StorytelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytelTests.swift; sourceTree = "<group>"; };
 		FAEC0A842269B154003AE443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEC0A972269BE34003AE443 /* StatusViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewCell.swift; sourceTree = "<group>"; };
+		FAEC0A982269BE34003AE443 /* StatusViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusViewCell.xib; sourceTree = "<group>"; };
+		FAEC0A9D2269BE67003AE443 /* QueryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryViewCell.swift; sourceTree = "<group>"; };
+		FAEC0A9E2269BE67003AE443 /* QueryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QueryViewCell.xib; sourceTree = "<group>"; };
+		FAEC0AA12269BE82003AE443 /* BookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewCell.swift; sourceTree = "<group>"; };
+		FAEC0AA22269BE82003AE443 /* BookViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +113,6 @@
 		FAEC0A8D2269B1D7003AE443 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FAEC0A6F2269B153003AE443 /* SearchBooksViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -109,6 +120,8 @@
 		FAEC0A8E2269B1DA003AE443 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FAEC0A902269B957003AE443 /* ViewCell */,
+				FAEC0A6F2269B153003AE443 /* SearchBooksViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +131,19 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FAEC0A902269B957003AE443 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC0A972269BE34003AE443 /* StatusViewCell.swift */,
+				FAEC0A982269BE34003AE443 /* StatusViewCell.xib */,
+				FAEC0A9D2269BE67003AE443 /* QueryViewCell.swift */,
+				FAEC0A9E2269BE67003AE443 /* QueryViewCell.xib */,
+				FAEC0AA12269BE82003AE443 /* BookViewCell.swift */,
+				FAEC0AA22269BE82003AE443 /* BookViewCell.xib */,
+			);
+			path = ViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEC0A782269B154003AE443 /* LaunchScreen.storyboard in Resources */,
+				FAEC0AA02269BE67003AE443 /* QueryViewCell.xib in Resources */,
 				FAEC0A752269B154003AE443 /* Assets.xcassets in Resources */,
+				FAEC0AA42269BE82003AE443 /* BookViewCell.xib in Resources */,
+				FAEC0A9A2269BE34003AE443 /* StatusViewCell.xib in Resources */,
 				FAEC0A732269B153003AE443 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +252,9 @@
 			files = (
 				FAEC0A702269B153003AE443 /* SearchBooksViewController.swift in Sources */,
 				FAEC0A6E2269B153003AE443 /* AppDelegate.swift in Sources */,
+				FAEC0AA32269BE82003AE443 /* BookViewCell.swift in Sources */,
+				FAEC0A992269BE34003AE443 /* StatusViewCell.swift in Sources */,
+				FAEC0A9F2269BE67003AE443 /* QueryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
