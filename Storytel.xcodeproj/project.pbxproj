@@ -23,6 +23,16 @@
 		FAEC0AA82269CD3C003AE443 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AA72269CD3C003AE443 /* Author.swift */; };
 		FAEC0AAA2269CE12003AE443 /* Narrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AA92269CE12003AE443 /* Narrator.swift */; };
 		FAEC0AAC2269CE27003AE443 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AAB2269CE27003AE443 /* ImageSource.swift */; };
+		FAEC0ABD2269D040003AE443 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AB02269D040003AE443 /* ParameterEncoding.swift */; };
+		FAEC0ABE2269D040003AE443 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AB12269D040003AE443 /* URLParameterEncoding.swift */; };
+		FAEC0ABF2269D040003AE443 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AB22269D040003AE443 /* JSONParameterEncoder.swift */; };
+		FAEC0AC02269D040003AE443 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AB42269D040003AE443 /* NetworkManager.swift */; };
+		FAEC0AC12269D040003AE443 /* StorytelAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AB62269D040003AE443 /* StorytelAPIEndPoint.swift */; };
+		FAEC0AC22269D040003AE443 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AB82269D040003AE443 /* HTTPTask.swift */; };
+		FAEC0AC32269D040003AE443 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AB92269D040003AE443 /* HTTPMethod.swift */; };
+		FAEC0AC42269D040003AE443 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0ABA2269D040003AE443 /* Router.swift */; };
+		FAEC0AC52269D040003AE443 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0ABB2269D040003AE443 /* NetworkLogger.swift */; };
+		FAEC0AC62269D040003AE443 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0ABC2269D040003AE443 /* EndPointType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +66,16 @@
 		FAEC0AA72269CD3C003AE443 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		FAEC0AA92269CE12003AE443 /* Narrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Narrator.swift; sourceTree = "<group>"; };
 		FAEC0AAB2269CE27003AE443 /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
+		FAEC0AB02269D040003AE443 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		FAEC0AB12269D040003AE443 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		FAEC0AB22269D040003AE443 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		FAEC0AB42269D040003AE443 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FAEC0AB62269D040003AE443 /* StorytelAPIEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorytelAPIEndPoint.swift; sourceTree = "<group>"; };
+		FAEC0AB82269D040003AE443 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		FAEC0AB92269D040003AE443 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FAEC0ABA2269D040003AE443 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FAEC0ABB2269D040003AE443 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		FAEC0ABC2269D040003AE443 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +117,7 @@
 		FAEC0A6C2269B153003AE443 /* Storytel */ = {
 			isa = PBXGroup;
 			children = (
+				FAEC0AAD2269CFE6003AE443 /* Service */,
 				FAEC0A8F2269B1DC003AE443 /* Model */,
 				FAEC0A8E2269B1DA003AE443 /* View */,
 				FAEC0A8D2269B1D7003AE443 /* ViewModel */,
@@ -156,6 +177,63 @@
 				FAEC0AA22269BE82003AE443 /* BookViewCell.xib */,
 			);
 			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		FAEC0AAD2269CFE6003AE443 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC0AAE2269D040003AE443 /* Networking */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FAEC0AAE2269D040003AE443 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC0AAF2269D040003AE443 /* Encoding */,
+				FAEC0AB32269D040003AE443 /* Manager */,
+				FAEC0AB52269D040003AE443 /* EndPoint */,
+				FAEC0AB72269D040003AE443 /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FAEC0AAF2269D040003AE443 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC0AB02269D040003AE443 /* ParameterEncoding.swift */,
+				FAEC0AB12269D040003AE443 /* URLParameterEncoding.swift */,
+				FAEC0AB22269D040003AE443 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		FAEC0AB32269D040003AE443 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC0AB42269D040003AE443 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FAEC0AB52269D040003AE443 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC0AB62269D040003AE443 /* StorytelAPIEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		FAEC0AB72269D040003AE443 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC0AB82269D040003AE443 /* HTTPTask.swift */,
+				FAEC0AB92269D040003AE443 /* HTTPMethod.swift */,
+				FAEC0ABA2269D040003AE443 /* Router.swift */,
+				FAEC0ABB2269D040003AE443 /* NetworkLogger.swift */,
+				FAEC0ABC2269D040003AE443 /* EndPointType.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,10 +342,20 @@
 			files = (
 				FAEC0A702269B153003AE443 /* SearchBooksViewController.swift in Sources */,
 				FAEC0A6E2269B153003AE443 /* AppDelegate.swift in Sources */,
+				FAEC0ABD2269D040003AE443 /* ParameterEncoding.swift in Sources */,
+				FAEC0AC62269D040003AE443 /* EndPointType.swift in Sources */,
+				FAEC0AC02269D040003AE443 /* NetworkManager.swift in Sources */,
 				FAEC0AAA2269CE12003AE443 /* Narrator.swift in Sources */,
 				FAEC0AA62269CB7F003AE443 /* Book.swift in Sources */,
+				FAEC0AC52269D040003AE443 /* NetworkLogger.swift in Sources */,
+				FAEC0AC22269D040003AE443 /* HTTPTask.swift in Sources */,
 				FAEC0AA32269BE82003AE443 /* BookViewCell.swift in Sources */,
 				FAEC0A992269BE34003AE443 /* StatusViewCell.swift in Sources */,
+				FAEC0AC12269D040003AE443 /* StorytelAPIEndPoint.swift in Sources */,
+				FAEC0AC42269D040003AE443 /* Router.swift in Sources */,
+				FAEC0ABE2269D040003AE443 /* URLParameterEncoding.swift in Sources */,
+				FAEC0ABF2269D040003AE443 /* JSONParameterEncoder.swift in Sources */,
+				FAEC0AC32269D040003AE443 /* HTTPMethod.swift in Sources */,
 				FAEC0AA82269CD3C003AE443 /* Author.swift in Sources */,
 				FAEC0AAC2269CE27003AE443 /* ImageSource.swift in Sources */,
 				FAEC0A9F2269BE67003AE443 /* QueryViewCell.swift in Sources */,
