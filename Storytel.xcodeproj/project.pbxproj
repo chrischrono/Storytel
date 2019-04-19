@@ -19,6 +19,10 @@
 		FAEC0AA02269BE67003AE443 /* QueryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A9E2269BE67003AE443 /* QueryViewCell.xib */; };
 		FAEC0AA32269BE82003AE443 /* BookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AA12269BE82003AE443 /* BookViewCell.swift */; };
 		FAEC0AA42269BE82003AE443 /* BookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0AA22269BE82003AE443 /* BookViewCell.xib */; };
+		FAEC0AA62269CB7F003AE443 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AA52269CB7F003AE443 /* Book.swift */; };
+		FAEC0AA82269CD3C003AE443 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AA72269CD3C003AE443 /* Author.swift */; };
+		FAEC0AAA2269CE12003AE443 /* Narrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AA92269CE12003AE443 /* Narrator.swift */; };
+		FAEC0AAC2269CE27003AE443 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AAB2269CE27003AE443 /* ImageSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		FAEC0A9E2269BE67003AE443 /* QueryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QueryViewCell.xib; sourceTree = "<group>"; };
 		FAEC0AA12269BE82003AE443 /* BookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewCell.swift; sourceTree = "<group>"; };
 		FAEC0AA22269BE82003AE443 /* BookViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookViewCell.xib; sourceTree = "<group>"; };
+		FAEC0AA52269CB7F003AE443 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		FAEC0AA72269CD3C003AE443 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		FAEC0AA92269CE12003AE443 /* Narrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Narrator.swift; sourceTree = "<group>"; };
+		FAEC0AAB2269CE27003AE443 /* ImageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +137,10 @@
 		FAEC0A8F2269B1DC003AE443 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FAEC0AA52269CB7F003AE443 /* Book.swift */,
+				FAEC0AA72269CD3C003AE443 /* Author.swift */,
+				FAEC0AA92269CE12003AE443 /* Narrator.swift */,
+				FAEC0AAB2269CE27003AE443 /* ImageSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,8 +264,12 @@
 			files = (
 				FAEC0A702269B153003AE443 /* SearchBooksViewController.swift in Sources */,
 				FAEC0A6E2269B153003AE443 /* AppDelegate.swift in Sources */,
+				FAEC0AAA2269CE12003AE443 /* Narrator.swift in Sources */,
+				FAEC0AA62269CB7F003AE443 /* Book.swift in Sources */,
 				FAEC0AA32269BE82003AE443 /* BookViewCell.swift in Sources */,
 				FAEC0A992269BE34003AE443 /* StatusViewCell.swift in Sources */,
+				FAEC0AA82269CD3C003AE443 /* Author.swift in Sources */,
+				FAEC0AAC2269CE27003AE443 /* ImageSource.swift in Sources */,
 				FAEC0A9F2269BE67003AE443 /* QueryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
