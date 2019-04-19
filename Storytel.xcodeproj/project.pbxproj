@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAEC0A6E2269B153003AE443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6D2269B153003AE443 /* AppDelegate.swift */; };
-		FAEC0A702269B153003AE443 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6F2269B153003AE443 /* ViewController.swift */; };
+		FAEC0A702269B153003AE443 /* SearchBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6F2269B153003AE443 /* SearchBooksViewController.swift */; };
 		FAEC0A732269B153003AE443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A712269B153003AE443 /* Main.storyboard */; };
 		FAEC0A752269B154003AE443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A742269B154003AE443 /* Assets.xcassets */; };
 		FAEC0A782269B154003AE443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A762269B154003AE443 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		FAEC0A6A2269B153003AE443 /* Storytel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storytel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC0A6D2269B153003AE443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAEC0A6F2269B153003AE443 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAEC0A6F2269B153003AE443 /* SearchBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewController.swift; sourceTree = "<group>"; };
 		FAEC0A722269B153003AE443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAEC0A742269B154003AE443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEC0A772269B154003AE443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,8 +77,10 @@
 		FAEC0A6C2269B153003AE443 /* Storytel */ = {
 			isa = PBXGroup;
 			children = (
+				FAEC0A8F2269B1DC003AE443 /* Model */,
+				FAEC0A8E2269B1DA003AE443 /* View */,
+				FAEC0A8D2269B1D7003AE443 /* ViewModel */,
 				FAEC0A6D2269B153003AE443 /* AppDelegate.swift */,
-				FAEC0A6F2269B153003AE443 /* ViewController.swift */,
 				FAEC0A712269B153003AE443 /* Main.storyboard */,
 				FAEC0A742269B154003AE443 /* Assets.xcassets */,
 				FAEC0A762269B154003AE443 /* LaunchScreen.storyboard */,
@@ -94,6 +96,28 @@
 				FAEC0A842269B154003AE443 /* Info.plist */,
 			);
 			path = StorytelTests;
+			sourceTree = "<group>";
+		};
+		FAEC0A8D2269B1D7003AE443 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC0A6F2269B153003AE443 /* SearchBooksViewController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAEC0A8E2269B1DA003AE443 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAEC0A8F2269B1DC003AE443 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAEC0A702269B153003AE443 /* ViewController.swift in Sources */,
+				FAEC0A702269B153003AE443 /* SearchBooksViewController.swift in Sources */,
 				FAEC0A6E2269B153003AE443 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchBooksViewController.swift
 //  Storytel
 //
 //  Created by Christian on 19/04/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchBooksViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
