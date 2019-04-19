@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FABD33442269FA4200558A36 /* TableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD33432269FA4200558A36 /* TableViewDataManager.swift */; };
 		FAEC0A6E2269B153003AE443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6D2269B153003AE443 /* AppDelegate.swift */; };
 		FAEC0A702269B153003AE443 /* SearchBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6F2269B153003AE443 /* SearchBooksViewController.swift */; };
 		FAEC0A732269B153003AE443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A712269B153003AE443 /* Main.storyboard */; };
@@ -33,6 +34,9 @@
 		FAEC0AC42269D040003AE443 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0ABA2269D040003AE443 /* Router.swift */; };
 		FAEC0AC52269D040003AE443 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0ABB2269D040003AE443 /* NetworkLogger.swift */; };
 		FAEC0AC62269D040003AE443 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0ABC2269D040003AE443 /* EndPointType.swift */; };
+		FAEC0ACA2269D467003AE443 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AC92269D467003AE443 /* StringExtension.swift */; };
+		FAEC0ACC2269D525003AE443 /* SearchBooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0ACB2269D525003AE443 /* SearchBooksViewModel.swift */; };
+		FAEC0ACE2269D544003AE443 /* BookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0ACD2269D544003AE443 /* BookCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FABD33432269FA4200558A36 /* TableViewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataManager.swift; sourceTree = "<group>"; };
 		FAEC0A6A2269B153003AE443 /* Storytel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storytel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC0A6D2269B153003AE443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEC0A6F2269B153003AE443 /* SearchBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +81,9 @@
 		FAEC0ABA2269D040003AE443 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FAEC0ABB2269D040003AE443 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		FAEC0ABC2269D040003AE443 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		FAEC0AC92269D467003AE443 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FAEC0ACB2269D525003AE443 /* SearchBooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewModel.swift; sourceTree = "<group>"; };
+		FAEC0ACD2269D544003AE443 /* BookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,7 @@
 		FAEC0A6C2269B153003AE443 /* Storytel */ = {
 			isa = PBXGroup;
 			children = (
+				FAEC0AC72269D411003AE443 /* Helper */,
 				FAEC0AAD2269CFE6003AE443 /* Service */,
 				FAEC0A8F2269B1DC003AE443 /* Model */,
 				FAEC0A8E2269B1DA003AE443 /* View */,
@@ -142,6 +151,8 @@
 		FAEC0A8D2269B1D7003AE443 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FAEC0ACB2269D525003AE443 /* SearchBooksViewModel.swift */,
+				FAEC0ACD2269D544003AE443 /* BookCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +245,23 @@
 				FAEC0ABC2269D040003AE443 /* EndPointType.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		FAEC0AC72269D411003AE443 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC0AC82269D421003AE443 /* Extension */,
+				FABD33432269FA4200558A36 /* TableViewDataManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FAEC0AC82269D421003AE443 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC0AC92269D467003AE443 /* StringExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,10 +379,14 @@
 				FAEC0AC22269D040003AE443 /* HTTPTask.swift in Sources */,
 				FAEC0AA32269BE82003AE443 /* BookViewCell.swift in Sources */,
 				FAEC0A992269BE34003AE443 /* StatusViewCell.swift in Sources */,
+				FAEC0ACC2269D525003AE443 /* SearchBooksViewModel.swift in Sources */,
 				FAEC0AC12269D040003AE443 /* StorytelAPIEndPoint.swift in Sources */,
+				FAEC0ACA2269D467003AE443 /* StringExtension.swift in Sources */,
 				FAEC0AC42269D040003AE443 /* Router.swift in Sources */,
 				FAEC0ABE2269D040003AE443 /* URLParameterEncoding.swift in Sources */,
+				FABD33442269FA4200558A36 /* TableViewDataManager.swift in Sources */,
 				FAEC0ABF2269D040003AE443 /* JSONParameterEncoder.swift in Sources */,
+				FAEC0ACE2269D544003AE443 /* BookCellViewModel.swift in Sources */,
 				FAEC0AC32269D040003AE443 /* HTTPMethod.swift in Sources */,
 				FAEC0AA82269CD3C003AE443 /* Author.swift in Sources */,
 				FAEC0AAC2269CE27003AE443 /* ImageSource.swift in Sources */,

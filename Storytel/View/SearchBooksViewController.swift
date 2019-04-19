@@ -10,11 +10,13 @@ import UIKit
 
 class SearchBooksViewController: UIViewController {
     @IBOutlet var searchTableView: UITableView!
-    
+    @IBOutlet var loadingView: UIActivityIndicatorView!
+    private let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //searchTableView.tableFooterView
     }
 
 
