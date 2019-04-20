@@ -17,7 +17,7 @@ class SearchBooksViewModel {
     }
     private var books = [Book]()
     private var totalCount = Int.max
-    private var nextPage = ""
+    private var nextPage: String?
     private(set) var bookCellViewModels = [BookCellViewModel]() {
         didSet{
             reloadTableViewClosure?()
@@ -39,7 +39,11 @@ class SearchBooksViewModel {
     var insertToTableViewClosure: ((Int, Int)->())?
     var showSearchErrorClosure: ((String)->())?
     var showLoadingViewCLosure: ((Bool)->())?
+    var showEditSearchQueryClosure: (()->())?
     
+    func userRequestEditSearchQuery() {
+        showEditSearchQueryClosure?()
+    }
 }
 
 //MARK:- searchBooks related
@@ -53,8 +57,8 @@ extension SearchBooksViewModel {
         searchBooks(query: query, page: nextPage)
     }
     
-    func searchBooks(query: String, page: String) {
-        guard currRequestedPage == nil else {
+    func searchBooks(query: String, page: String?) {
+        guard let page = page, currRequestedPage == nil else {
             return
         }
         
@@ -117,6 +121,5 @@ extension SearchBooksViewModel: TableViewDataManager {
         
         return bookCellViewModels[index]
     }
-    
     
 }

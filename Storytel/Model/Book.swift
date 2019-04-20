@@ -10,7 +10,7 @@ import Foundation
 
 struct QueryBooksResponse: Codable {
     let query: String
-    let nextPage: String
+    let nextPage: String?
     let totalCount: Int
     let items: [Book]
 }

@@ -10,11 +10,11 @@ import UIKit
 
 class SearchBooksViewController: UIViewController {
     @IBOutlet var searchTableView: UITableView!
-    @IBOutlet var loadingView: UIActivityIndicatorView!
+    private var loadingView: UIActivityIndicatorView!
     private let refreshControl = UIRefreshControl()
-    @IBOutlet var errorView: UIView!
-    @IBOutlet var errorLabel: UILabel!
-    @IBOutlet var errorViewBottomConstraint: NSLayoutConstraint!
+    private var errorView: UIView!
+    private var errorLabel: UILabel!
+    private var errorViewBottomConstraint: NSLayoutConstraint!
     
     var searchBooksViewModel = SearchBooksViewModel()
 
@@ -47,55 +47,26 @@ extension SearchBooksViewController {
                 self?.showLoadingView(isLoading)
             }
         }
+        searchBooksViewModel.showEditSearchQueryClosure = showEditSearchQuery
         
         searchBooksViewModel.refreshSearchBooks()
     }
 }
 
-//MARK: private func
-extension SearchBooksViewController {
-    private func initView() {
-        initTableView()
-        
-        errorViewBottomConstraint.constant = errorView.bounds.height
-        self.view.layoutIfNeeded()
-    }
-    
-    private func showSearchError(_ error: String) {
-        errorLabel.text = error.localized()
-        errorViewBottomConstraint.constant = 0
-        UIView.animate(withDuration: 0.2, animations: { [weak self] in
-            self?.view.layoutIfNeeded()
-        }) { [weak self] (_) in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                self?.hideErrorView()
-            })
-        }
-    }
-    private func hideErrorView() {
-        errorViewBottomConstraint.constant = errorView.bounds.height
-        UIView.animate(withDuration: 0.2) {
-            self.view.layoutIfNeeded()
-        }
-    }
-    
-    private func showLoadingView(_ isLoading: Bool) {
-        searchTableView.tableFooterView?.isHidden = !isLoading
-        if isLoading {
-            loadingView.startAnimating()
-        } else {
-            loadingView.stopAnimating()
-            refreshControl.endRefreshing()
-        }
-    }
-}
-
-
 //MARK: tableView related
 extension SearchBooksViewController: UITableViewDelegate, UITableViewDataSource {
     private func initTableView() {
+        searchTableView = BasicUI.createTableView(dataSource: self, delegate: self)
         searchTableView.register(UINib(nibName: "QueryViewCell", bundle: nil), forCellReuseIdentifier: "QueryViewCell")
         searchTableView.register(UINib(nibName: "BookViewCell", bundle: nil), forCellReuseIdentifier: "BookViewCell")
+        view.addSubview(searchTableView)
+        let safeArea = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            searchTableView.widthAnchor.constraint(equalTo: safeArea.widthAnchor),
+            searchTableView.heightAnchor.constraint(equalTo: safeArea.heightAnchor),
+            searchTableView.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+            searchTableView.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor)
+            ])
         
         refreshControl.addTarget(self, action:
             #selector(handleReshresh(_:)),
@@ -104,8 +75,10 @@ extension SearchBooksViewController: UITableViewDelegate, UITableViewDataSource 
         refreshControl.tintColor = UIColor.blue
         searchTableView.addSubview(refreshControl)
         
-        searchTableView.tableFooterView = loadingView
+        loadingView = BasicUI.createActivityIndicator(style: .whiteLarge, color: "E75B0C")
+        loadingView.translatesAutoresizingMaskIntoConstraints = true
         loadingView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: loadingView.bounds.height)
+        searchTableView.tableFooterView = loadingView
         searchTableView.tableFooterView?.isHidden = true
     }
     
@@ -142,7 +115,96 @@ extension SearchBooksViewController: UITableViewDelegate, UITableViewDataSource 
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("userSelected cell at index: \(indexPath.row)")
+        let index = indexPath.row
+        
+        if index == 0 {
+            searchBooksViewModel.userRequestEditSearchQuery()
+        } else {
+            print("userSelected cell at index: \(index - 1)")
+        }
+        
     }
 }
 
+
+//MARK: private func
+extension SearchBooksViewController {
+    private func initView() {
+        initTableView()
+        
+        errorView = BasicUI.createView()
+        view.addSubview(errorView)
+        errorViewBottomConstraint = errorView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 60)
+        NSLayoutConstraint.activate([
+            errorView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            errorView.heightAnchor.constraint(equalToConstant: 60),
+            errorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            errorViewBottomConstraint
+            ])
+        
+        errorLabel = BasicUI.createLabel(text: "Error")
+        errorView.addSubview(errorLabel)
+        NSLayoutConstraint.activate([
+            errorLabel.widthAnchor.constraint(equalTo: errorView.widthAnchor, constant: -40),
+            errorLabel.centerXAnchor.constraint(equalTo: errorView.centerXAnchor),
+            errorLabel.centerYAnchor.constraint(equalTo: errorView.centerYAnchor)
+            ])
+    }
+    
+    private func showSearchError(_ error: String) {
+        errorLabel.text = error.localized()
+        errorViewBottomConstraint.constant = 0
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+            self?.view.layoutIfNeeded()
+        }) { [weak self] (_) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                self?.hideErrorView()
+            })
+        }
+    }
+    private func hideErrorView() {
+        errorViewBottomConstraint.constant = errorView.bounds.height
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    private func showLoadingView(_ isLoading: Bool) {
+        searchTableView.tableFooterView?.isHidden = !isLoading
+        if isLoading {
+            loadingView.startAnimating()
+        } else {
+            loadingView.stopAnimating()
+            refreshControl.endRefreshing()
+        }
+    }
+    
+    private func showEditSearchQuery() {
+        let alertController = UIAlertController(title: "New Query:", message: nil, preferredStyle: .alert)
+        
+        //the confirm action taking the inputs
+        let confirmAction = UIAlertAction(title: "Search", style: .default) { (_) in
+            
+            //getting the input values from user
+            let query = alertController.textFields?[0].text
+            if let query = query, query.count > 0 {
+                self.searchBooksViewModel.query = query
+            }
+        }
+        
+        //the cancel action doing nothing
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        //adding textfields to our dialog box
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter keyword"
+        }
+        
+        //adding the action to dialogbox
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        //finally presenting the dialog box
+        self.present(alertController, animated: true, completion: nil)
+    }
+}

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0926FD68D29991B5A2A6B9A8 /* Pods_StorytelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7B41C13EFBF8CFDD0992F9 /* Pods_StorytelTests.framework */; };
+		EDC1C3CB3B97AE8E64EF55B2 /* Pods_Storytel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1640D03E3DE4CE6B97F0D9 /* Pods_Storytel.framework */; };
+		FA564F3F226B4D26009353BD /* BasicUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA564F3E226B4D26009353BD /* BasicUI.swift */; };
+		FA564F41226B4EEE009353BD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA564F40226B4EEE009353BD /* UIColorExtension.swift */; };
 		FABD33442269FA4200558A36 /* TableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD33432269FA4200558A36 /* TableViewDataManager.swift */; };
 		FAEC0A6E2269B153003AE443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6D2269B153003AE443 /* AppDelegate.swift */; };
 		FAEC0A702269B153003AE443 /* SearchBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6F2269B153003AE443 /* SearchBooksViewController.swift */; };
@@ -14,8 +18,6 @@
 		FAEC0A752269B154003AE443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A742269B154003AE443 /* Assets.xcassets */; };
 		FAEC0A782269B154003AE443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A762269B154003AE443 /* LaunchScreen.storyboard */; };
 		FAEC0A832269B154003AE443 /* StorytelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A822269B154003AE443 /* StorytelTests.swift */; };
-		FAEC0A992269BE34003AE443 /* StatusViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A972269BE34003AE443 /* StatusViewCell.swift */; };
-		FAEC0A9A2269BE34003AE443 /* StatusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A982269BE34003AE443 /* StatusViewCell.xib */; };
 		FAEC0A9F2269BE67003AE443 /* QueryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A9D2269BE67003AE443 /* QueryViewCell.swift */; };
 		FAEC0AA02269BE67003AE443 /* QueryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEC0A9E2269BE67003AE443 /* QueryViewCell.xib */; };
 		FAEC0AA32269BE82003AE443 /* BookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0AA12269BE82003AE443 /* BookViewCell.swift */; };
@@ -50,6 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F265302E4B59A9FD72527B0 /* Pods-Storytel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storytel.release.xcconfig"; path = "Target Support Files/Pods-Storytel/Pods-Storytel.release.xcconfig"; sourceTree = "<group>"; };
+		45EDB77FBEA0FB8F7C8E35A4 /* Pods-StorytelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorytelTests.release.xcconfig"; path = "Target Support Files/Pods-StorytelTests/Pods-StorytelTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B1640D03E3DE4CE6B97F0D9 /* Pods_Storytel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storytel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD7B41C13EFBF8CFDD0992F9 /* Pods_StorytelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StorytelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3A9E3E3962C59FE028B65B9 /* Pods-Storytel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storytel.debug.xcconfig"; path = "Target Support Files/Pods-Storytel/Pods-Storytel.debug.xcconfig"; sourceTree = "<group>"; };
+		FA564F3E226B4D26009353BD /* BasicUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUI.swift; sourceTree = "<group>"; };
+		FA564F40226B4EEE009353BD /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FABD33432269FA4200558A36 /* TableViewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataManager.swift; sourceTree = "<group>"; };
 		FAEC0A6A2269B153003AE443 /* Storytel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storytel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC0A6D2269B153003AE443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +70,6 @@
 		FAEC0A7E2269B154003AE443 /* StorytelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StorytelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC0A822269B154003AE443 /* StorytelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytelTests.swift; sourceTree = "<group>"; };
 		FAEC0A842269B154003AE443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAEC0A972269BE34003AE443 /* StatusViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewCell.swift; sourceTree = "<group>"; };
-		FAEC0A982269BE34003AE443 /* StatusViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusViewCell.xib; sourceTree = "<group>"; };
 		FAEC0A9D2269BE67003AE443 /* QueryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryViewCell.swift; sourceTree = "<group>"; };
 		FAEC0A9E2269BE67003AE443 /* QueryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QueryViewCell.xib; sourceTree = "<group>"; };
 		FAEC0AA12269BE82003AE443 /* BookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewCell.swift; sourceTree = "<group>"; };
@@ -84,6 +91,7 @@
 		FAEC0AC92269D467003AE443 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		FAEC0ACB2269D525003AE443 /* SearchBooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewModel.swift; sourceTree = "<group>"; };
 		FAEC0ACD2269D544003AE443 /* BookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellViewModel.swift; sourceTree = "<group>"; };
+		FC9188593DF42BFCD0594A4B /* Pods-StorytelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorytelTests.debug.xcconfig"; path = "Target Support Files/Pods-StorytelTests/Pods-StorytelTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC1C3CB3B97AE8E64EF55B2 /* Pods_Storytel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,18 +107,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0926FD68D29991B5A2A6B9A8 /* Pods_StorytelTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A3775250CE951AA5ED59B7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B1640D03E3DE4CE6B97F0D9 /* Pods_Storytel.framework */,
+				BD7B41C13EFBF8CFDD0992F9 /* Pods_StorytelTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC3F92CED846F84AB3A22689 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9E3E3962C59FE028B65B9 /* Pods-Storytel.debug.xcconfig */,
+				2F265302E4B59A9FD72527B0 /* Pods-Storytel.release.xcconfig */,
+				FC9188593DF42BFCD0594A4B /* Pods-StorytelTests.debug.xcconfig */,
+				45EDB77FBEA0FB8F7C8E35A4 /* Pods-StorytelTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FAEC0A612269B153003AE443 = {
 			isa = PBXGroup;
 			children = (
 				FAEC0A6C2269B153003AE443 /* Storytel */,
 				FAEC0A812269B154003AE443 /* StorytelTests */,
 				FAEC0A6B2269B153003AE443 /* Products */,
+				CC3F92CED846F84AB3A22689 /* Pods */,
+				0A3775250CE951AA5ED59B7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,8 +213,6 @@
 		FAEC0A902269B957003AE443 /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				FAEC0A972269BE34003AE443 /* StatusViewCell.swift */,
-				FAEC0A982269BE34003AE443 /* StatusViewCell.xib */,
 				FAEC0A9D2269BE67003AE443 /* QueryViewCell.swift */,
 				FAEC0A9E2269BE67003AE443 /* QueryViewCell.xib */,
 				FAEC0AA12269BE82003AE443 /* BookViewCell.swift */,
@@ -252,6 +283,7 @@
 			children = (
 				FAEC0AC82269D421003AE443 /* Extension */,
 				FABD33432269FA4200558A36 /* TableViewDataManager.swift */,
+				FA564F3E226B4D26009353BD /* BasicUI.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -260,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEC0AC92269D467003AE443 /* StringExtension.swift */,
+				FA564F40226B4EEE009353BD /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -271,9 +304,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAEC0A872269B154003AE443 /* Build configuration list for PBXNativeTarget "Storytel" */;
 			buildPhases = (
+				ECB9CF27C0DE06BEBC81D4E0 /* [CP] Check Pods Manifest.lock */,
 				FAEC0A662269B153003AE443 /* Sources */,
 				FAEC0A672269B153003AE443 /* Frameworks */,
 				FAEC0A682269B153003AE443 /* Resources */,
+				CB2655875CB56B1ADA5D2E98 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +323,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAEC0A8A2269B154003AE443 /* Build configuration list for PBXNativeTarget "StorytelTests" */;
 			buildPhases = (
+				F9BC8D0BEE7F201A530D3FD9 /* [CP] Check Pods Manifest.lock */,
 				FAEC0A7A2269B154003AE443 /* Sources */,
 				FAEC0A7B2269B154003AE443 /* Frameworks */,
 				FAEC0A7C2269B154003AE443 /* Resources */,
@@ -349,7 +385,6 @@
 				FAEC0AA02269BE67003AE443 /* QueryViewCell.xib in Resources */,
 				FAEC0A752269B154003AE443 /* Assets.xcassets in Resources */,
 				FAEC0AA42269BE82003AE443 /* BookViewCell.xib in Resources */,
-				FAEC0A9A2269BE34003AE443 /* StatusViewCell.xib in Resources */,
 				FAEC0A732269B153003AE443 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +397,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB2655875CB56B1ADA5D2E98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Storytel/Pods-Storytel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Storytel/Pods-Storytel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECB9CF27C0DE06BEBC81D4E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Storytel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9BC8D0BEE7F201A530D3FD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StorytelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAEC0A662269B153003AE443 /* Sources */ = {
@@ -378,12 +482,13 @@
 				FAEC0AC52269D040003AE443 /* NetworkLogger.swift in Sources */,
 				FAEC0AC22269D040003AE443 /* HTTPTask.swift in Sources */,
 				FAEC0AA32269BE82003AE443 /* BookViewCell.swift in Sources */,
-				FAEC0A992269BE34003AE443 /* StatusViewCell.swift in Sources */,
 				FAEC0ACC2269D525003AE443 /* SearchBooksViewModel.swift in Sources */,
 				FAEC0AC12269D040003AE443 /* StorytelAPIEndPoint.swift in Sources */,
 				FAEC0ACA2269D467003AE443 /* StringExtension.swift in Sources */,
 				FAEC0AC42269D040003AE443 /* Router.swift in Sources */,
+				FA564F3F226B4D26009353BD /* BasicUI.swift in Sources */,
 				FAEC0ABE2269D040003AE443 /* URLParameterEncoding.swift in Sources */,
+				FA564F41226B4EEE009353BD /* UIColorExtension.swift in Sources */,
 				FABD33442269FA4200558A36 /* TableViewDataManager.swift in Sources */,
 				FAEC0ABF2269D040003AE443 /* JSONParameterEncoder.swift in Sources */,
 				FAEC0ACE2269D544003AE443 /* BookCellViewModel.swift in Sources */,
@@ -550,6 +655,7 @@
 		};
 		FAEC0A882269B154003AE443 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3A9E3E3962C59FE028B65B9 /* Pods-Storytel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -568,6 +674,7 @@
 		};
 		FAEC0A892269B154003AE443 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F265302E4B59A9FD72527B0 /* Pods-Storytel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -586,6 +693,7 @@
 		};
 		FAEC0A8B2269B154003AE443 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC9188593DF42BFCD0594A4B /* Pods-StorytelTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -607,6 +715,7 @@
 		};
 		FAEC0A8C2269B154003AE443 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45EDB77FBEA0FB8F7C8E35A4 /* Pods-StorytelTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
