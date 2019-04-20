@@ -12,6 +12,10 @@
 		FA564F3F226B4D26009353BD /* BasicUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA564F3E226B4D26009353BD /* BasicUI.swift */; };
 		FA564F41226B4EEE009353BD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA564F40226B4EEE009353BD /* UIColorExtension.swift */; };
 		FA60BC23226BC1C300C9CF05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA60BC25226BC1C300C9CF05 /* Localizable.strings */; };
+		FA60BC2A226BC5E700C9CF05 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = FA60BC29226BC5E700C9CF05 /* search.json */; };
+		FA60BC2C226BC7DE00C9CF05 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60BC2B226BC7DE00C9CF05 /* XCTestCase.swift */; };
+		FA60BC2E226BC80F00C9CF05 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60BC2D226BC80F00C9CF05 /* MockNetworkManager.swift */; };
+		FA60BC30226BCB8B00C9CF05 /* SearchBooksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60BC2F226BCB8B00C9CF05 /* SearchBooksViewModelTests.swift */; };
 		FABD33442269FA4200558A36 /* TableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD33432269FA4200558A36 /* TableViewDataManager.swift */; };
 		FAEC0A6E2269B153003AE443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6D2269B153003AE443 /* AppDelegate.swift */; };
 		FAEC0A702269B153003AE443 /* SearchBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6F2269B153003AE443 /* SearchBooksViewController.swift */; };
@@ -61,6 +65,10 @@
 		FA564F3E226B4D26009353BD /* BasicUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUI.swift; sourceTree = "<group>"; };
 		FA564F40226B4EEE009353BD /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FA60BC24226BC1C300C9CF05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA60BC29226BC5E700C9CF05 /* search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
+		FA60BC2B226BC7DE00C9CF05 /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		FA60BC2D226BC80F00C9CF05 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		FA60BC2F226BCB8B00C9CF05 /* SearchBooksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewModelTests.swift; sourceTree = "<group>"; };
 		FABD33432269FA4200558A36 /* TableViewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataManager.swift; sourceTree = "<group>"; };
 		FAEC0A6A2269B153003AE443 /* Storytel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storytel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC0A6D2269B153003AE443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +144,30 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA60BC26226BC5A300C9CF05 /* MockService */ = {
+			isa = PBXGroup;
+			children = (
+				FA60BC2D226BC80F00C9CF05 /* MockNetworkManager.swift */,
+			);
+			path = MockService;
+			sourceTree = "<group>";
+		};
+		FA60BC27226BC5AA00C9CF05 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA60BC2B226BC7DE00C9CF05 /* XCTestCase.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FA60BC28226BC5AD00C9CF05 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FA60BC29226BC5E700C9CF05 /* search.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		FAEC0A612269B153003AE443 = {
 			isa = PBXGroup;
 			children = (
@@ -177,8 +209,12 @@
 		FAEC0A812269B154003AE443 /* StorytelTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA60BC28226BC5AD00C9CF05 /* Resource */,
+				FA60BC27226BC5AA00C9CF05 /* Extension */,
+				FA60BC26226BC5A300C9CF05 /* MockService */,
 				FAEC0A822269B154003AE443 /* StorytelTests.swift */,
 				FAEC0A842269B154003AE443 /* Info.plist */,
+				FA60BC2F226BCB8B00C9CF05 /* SearchBooksViewModelTests.swift */,
 			);
 			path = StorytelTests;
 			sourceTree = "<group>";
@@ -396,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA60BC2A226BC5E700C9CF05 /* search.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +543,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA60BC2E226BC80F00C9CF05 /* MockNetworkManager.swift in Sources */,
+				FA60BC30226BCB8B00C9CF05 /* SearchBooksViewModelTests.swift in Sources */,
+				FA60BC2C226BC7DE00C9CF05 /* XCTestCase.swift in Sources */,
 				FAEC0A832269B154003AE443 /* StorytelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

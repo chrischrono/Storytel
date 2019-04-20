@@ -64,6 +64,7 @@ extension SearchBooksViewModel {
         
         currRequestedPage = page
         isLoading = true
+        status = nil
         networkManager.searchBooks(query: query, page: page) { [weak self] (queryBooksResponse, error) in
             guard let self = self else {
                 return
@@ -71,6 +72,7 @@ extension SearchBooksViewModel {
             self.currRequestedPage = nil
             self.isLoading = false
             guard error == nil else {
+                self.status = error
                 self.showSearchErrorClosure?(error!)
                 return
             }
