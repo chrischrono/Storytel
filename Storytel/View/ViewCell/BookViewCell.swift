@@ -26,4 +26,19 @@ class BookViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureCell(model: BookCellViewModel?) {
+        if let model = model {
+            //set coverImageView
+            coverImageView.alpha = 1
+            titleLabel.text = model.title
+            authorLabel.text = "by: \(model.author)"
+            narratorLabel.text = "with: \(model.narrator)"
+        } else {
+            coverImageView.alpha = 0
+            titleLabel.text = "Query book not found"
+            authorLabel.text = nil
+            narratorLabel.text = nil
+        }
+    }
+    
 }

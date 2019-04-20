@@ -23,4 +23,8 @@ class QueryViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureCell(query: String) {
+        queryLabel.text = "Query: \(query)"
+    }
+    
 }

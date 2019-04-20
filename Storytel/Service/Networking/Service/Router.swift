@@ -32,34 +32,6 @@ protocol NetworkRouter: class {
     func handleNetworkResponse(data: Data?, response: URLResponse?, error: Error?) -> Result<String>
 }
 
-extension NetworkRouter {
-    /**
-     Handle all basic network error responses
-     */
-    func handleNetworkResponse(data: Data?, response: URLResponse?, error: Error?) -> Result<String>{
-        if error != nil {
-            return .failure(NetworkResponse.noNetworkConnection.rawValue)
-        }
-        
-        if let response = response as? HTTPURLResponse {
-            switch response.statusCode {
-            case 200...299:
-                print("HTTPURLResponse: success")
-            case 401...500: return .failure(NetworkResponse.authenticationError.rawValue)
-            case 501...599: return .failure(NetworkResponse.badRequest.rawValue)
-            case 600: return .failure(NetworkResponse.outdated.rawValue)
-            default: return .failure(NetworkResponse.failed.rawValue)
-            }
-        }
-        
-        guard data != nil else {
-            return .failure(NetworkResponse.noData.rawValue)
-        }
-        
-        return .success
-    }
-}
-
 class Router<EndPoint: EndPointType>: NetworkRouter {
     private let session = URLSession(configuration: .default)
     private var task: URLSessionTask?
@@ -147,5 +119,31 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         }
     }
     
+    
+    /**
+     Handle all basic network error responses
+     */
+    func handleNetworkResponse(data: Data?, response: URLResponse?, error: Error?) -> Result<String>{
+        if error != nil {
+            return .failure(NetworkResponse.noNetworkConnection.rawValue)
+        }
+        
+        if let response = response as? HTTPURLResponse {
+            switch response.statusCode {
+            case 200...299:
+                print("HTTPURLResponse: success")
+            case 401...500: return .failure(NetworkResponse.authenticationError.rawValue)
+            case 501...599: return .failure(NetworkResponse.badRequest.rawValue)
+            case 600: return .failure(NetworkResponse.outdated.rawValue)
+            default: return .failure(NetworkResponse.failed.rawValue)
+            }
+        }
+        
+        guard data != nil else {
+            return .failure(NetworkResponse.noData.rawValue)
+        }
+        
+        return .success
+    }
 }
 

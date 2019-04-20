@@ -19,7 +19,7 @@ struct QueryBooksResponse: Codable {
 struct Book: Codable {
     let id: String
     let title: String
-    let originalTitle: String
+    let originalTitle: String?
     let type: String
     let description: String
     let authors: [Author]
@@ -29,6 +29,6 @@ struct Book: Codable {
     let cover: ImageSource
     let seriesId: String?
     let seriesName: String?
-    let orderInSeries: String?
+    let orderInSeries: Int?
     let seasonNumber: Int?
 }

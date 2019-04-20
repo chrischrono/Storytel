@@ -10,7 +10,11 @@ import Foundation
 
 
 class SearchBooksViewModel {
-    var query = "harry"
+    var query = "harry" {
+        didSet {
+            refreshSearchBooks()
+        }
+    }
     private var books = [Book]()
     private var totalCount = Int.max
     private var nextPage = ""
@@ -23,23 +27,29 @@ class SearchBooksViewModel {
     private(set) var currentDataCount = 0
     private(set) var status: String?
     private var currRequestedPage: String?
+    private(set) var isLoading = false {
+        didSet {
+            showLoadingViewCLosure?(isLoading)
+        }
+    }
     
     var networkManager: StorytelAPINetworkProtocol = StorytelAPINetworkManager(environment: .production)
     
     var reloadTableViewClosure: (()->())?
     var insertToTableViewClosure: ((Int, Int)->())?
     var showSearchErrorClosure: ((String)->())?
+    var showLoadingViewCLosure: ((Bool)->())?
     
 }
 
 //MARK:- searchBooks related
 extension SearchBooksViewModel {
     
-    @objc func refreshSearchBooks() {
+    func refreshSearchBooks() {
         searchBooks(query: query, page: "")
     }
     
-    @objc func loadNextPage() {
+    func loadNextPage() {
         searchBooks(query: query, page: nextPage)
     }
     
@@ -49,11 +59,13 @@ extension SearchBooksViewModel {
         }
         
         currRequestedPage = page
+        isLoading = true
         networkManager.searchBooks(query: query, page: page) { [weak self] (queryBooksResponse, error) in
             guard let self = self else {
                 return
             }
             self.currRequestedPage = nil
+            self.isLoading = false
             guard error == nil else {
                 self.showSearchErrorClosure?(error!)
                 return
@@ -97,6 +109,10 @@ extension SearchBooksViewModel: TableViewDataManager {
     func getBookCellViewModel(at index: Int) -> BookCellViewModel? {
         guard index < bookCellViewModels.count else {
             return nil
+        }
+        
+        if index + 5 > bookCellViewModels.count {
+            loadNextPage()
         }
         
         return bookCellViewModels[index]

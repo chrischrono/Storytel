@@ -26,17 +26,47 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="48W-As-MN6"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hqX-Us-AUh">
+                                <rect key="frame" x="189" y="430" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.90405470132827759" green="0.35522899031639099" blue="0.046770818531513214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PX6-Lr-l7r">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6V-CK-yxN">
+                                        <rect key="frame" x="20" y="19.5" width="374" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="L6V-CK-yxN" firstAttribute="width" secondItem="PX6-Lr-l7r" secondAttribute="width" constant="-40" id="BGG-E5-2x3"/>
+                                    <constraint firstItem="L6V-CK-yxN" firstAttribute="centerX" secondItem="PX6-Lr-l7r" secondAttribute="centerX" id="QkC-2K-CEt"/>
+                                    <constraint firstItem="L6V-CK-yxN" firstAttribute="centerY" secondItem="PX6-Lr-l7r" secondAttribute="centerY" id="Yn1-0P-LGY"/>
+                                    <constraint firstAttribute="height" constant="60" id="fLM-a3-wws"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.81177026033401489" green="0.81175482273101807" blue="0.81176525354385376" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="fvb-xj-5Bo" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="4vU-vQ-jeu"/>
+                            <constraint firstItem="PX6-Lr-l7r" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="FZo-EG-uR8"/>
                             <constraint firstItem="fvb-xj-5Bo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cXf-Ro-UUV"/>
+                            <constraint firstItem="PX6-Lr-l7r" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="etX-il-qPl"/>
                             <constraint firstItem="fvb-xj-5Bo" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="izY-Bi-Nso"/>
+                            <constraint firstItem="PX6-Lr-l7r" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rpO-r7-q8O"/>
                             <constraint firstItem="fvb-xj-5Bo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yRb-zF-UB0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="L6V-CK-yxN" id="Flp-OQ-3Yx"/>
+                        <outlet property="errorView" destination="PX6-Lr-l7r" id="y0k-Pm-sK1"/>
+                        <outlet property="errorViewBottomConstraint" destination="FZo-EG-uR8" id="WHj-fP-dES"/>
+                        <outlet property="loadingView" destination="hqX-Us-AUh" id="PtC-IL-5S6"/>
                         <outlet property="searchTableView" destination="fvb-xj-5Bo" id="D8l-5T-zXS"/>
                     </connections>
                 </viewController>
