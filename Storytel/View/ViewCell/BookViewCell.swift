@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BookViewCell: UITableViewCell {
     
@@ -28,12 +29,13 @@ class BookViewCell: UITableViewCell {
     
     func configureCell(model: BookCellViewModel?) {
         if let model = model {
-            //set coverImageView
+            coverImageView.kf.setImage(with: URL(string: model.coverUrl))
             coverImageView.alpha = 1
             titleLabel.text = model.title
-            authorLabel.text = "by: \(model.author)"
-            narratorLabel.text = "with: \(model.narrator)"
+            authorLabel.text = "book_view_cell_by".localized() + model.author
+            narratorLabel.text = "book_view_cell_with".localized() + model.narrator
         } else {
+            coverImageView.image = nil
             coverImageView.alpha = 0
             titleLabel.text = "Query book not found"
             authorLabel.text = nil

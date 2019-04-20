@@ -11,6 +11,7 @@
 		EDC1C3CB3B97AE8E64EF55B2 /* Pods_Storytel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1640D03E3DE4CE6B97F0D9 /* Pods_Storytel.framework */; };
 		FA564F3F226B4D26009353BD /* BasicUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA564F3E226B4D26009353BD /* BasicUI.swift */; };
 		FA564F41226B4EEE009353BD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA564F40226B4EEE009353BD /* UIColorExtension.swift */; };
+		FA60BC23226BC1C300C9CF05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA60BC25226BC1C300C9CF05 /* Localizable.strings */; };
 		FABD33442269FA4200558A36 /* TableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD33432269FA4200558A36 /* TableViewDataManager.swift */; };
 		FAEC0A6E2269B153003AE443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6D2269B153003AE443 /* AppDelegate.swift */; };
 		FAEC0A702269B153003AE443 /* SearchBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC0A6F2269B153003AE443 /* SearchBooksViewController.swift */; };
@@ -59,6 +60,7 @@
 		F3A9E3E3962C59FE028B65B9 /* Pods-Storytel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storytel.debug.xcconfig"; path = "Target Support Files/Pods-Storytel/Pods-Storytel.debug.xcconfig"; sourceTree = "<group>"; };
 		FA564F3E226B4D26009353BD /* BasicUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUI.swift; sourceTree = "<group>"; };
 		FA564F40226B4EEE009353BD /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		FA60BC24226BC1C300C9CF05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FABD33432269FA4200558A36 /* TableViewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataManager.swift; sourceTree = "<group>"; };
 		FAEC0A6A2269B153003AE443 /* Storytel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storytel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEC0A6D2269B153003AE443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,7 +133,6 @@
 				FC9188593DF42BFCD0594A4B /* Pods-StorytelTests.debug.xcconfig */,
 				45EDB77FBEA0FB8F7C8E35A4 /* Pods-StorytelTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -168,6 +169,7 @@
 				FAEC0A742269B154003AE443 /* Assets.xcassets */,
 				FAEC0A762269B154003AE443 /* LaunchScreen.storyboard */,
 				FAEC0A792269B154003AE443 /* Info.plist */,
+				FA60BC25226BC1C300C9CF05 /* Localizable.strings */,
 			);
 			path = Storytel;
 			sourceTree = "<group>";
@@ -382,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEC0A782269B154003AE443 /* LaunchScreen.storyboard in Resources */,
+				FA60BC23226BC1C300C9CF05 /* Localizable.strings in Resources */,
 				FAEC0AA02269BE67003AE443 /* QueryViewCell.xib in Resources */,
 				FAEC0A752269B154003AE443 /* Assets.xcassets in Resources */,
 				FAEC0AA42269BE82003AE443 /* BookViewCell.xib in Resources */,
@@ -518,6 +521,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FA60BC25226BC1C300C9CF05 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA60BC24226BC1C300C9CF05 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FAEC0A712269B153003AE443 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
