@@ -39,7 +39,7 @@ extension StorytelAPI: EndPointType {
         return .get
     }
     
-    /** generate task based on requested GitHubAPI. */
+    /** generate task based on requested StorytelAPI. */
     var task: HTTPTask {
         switch self {
         //https://api.storytel.net/search?query=harry&page=10
