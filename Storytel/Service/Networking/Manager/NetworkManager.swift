@@ -13,7 +13,7 @@ protocol StorytelAPINetworkProtocol {
      Search Books's data, that contain query's string,  based on StorytelAPI
      - Parameter query: search keyword for book list
      - Parameter page: requested page of book list
-     - Parameter completion: block to handle the fetch results
+     - Parameter completion: block to handle the Search results
      */
     func searchBooks(query: String, page: String, completion: @escaping (_ queryBooksResponse: QueryBooksResponse?,_ error: String?)->())
     
@@ -31,7 +31,7 @@ class StorytelAPINetworkManager: StorytelAPINetworkProtocol {
      Search Books's data, that contain query's string,  based on StorytelAPI
      - Parameter query: search keyword for book list
      - Parameter page: requested page of book list
-     - Parameter completion: block to handle the fetch results
+     - Parameter completion: block to handle the Search results
      */
     func searchBooks(query: String, page: String, completion: @escaping (_ queryBooksResponse: QueryBooksResponse?,_ error: String?)->()) {
         router.request(.searchBooks(query: query, page: page) ) { (data, response, error) in
