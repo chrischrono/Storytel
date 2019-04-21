@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchBooksViewController: UIViewController {
-    @IBOutlet var searchTableView: UITableView!
+    private var searchTableView: UITableView!
     private var loadingView: UIActivityIndicatorView!
     private let refreshControl = UIRefreshControl()
     private var errorView: UIView!
