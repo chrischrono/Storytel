@@ -186,8 +186,8 @@ extension SearchBooksViewController {
         let confirmAction = UIAlertAction(title: "general_search".localized(), style: .default) { (_) in
             
             //getting the input values from user
-            let query = alertController.textFields?[0].text
-            if let query = query, query.count > 0 {
+            let query = (alertController.textFields?[0].text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+            if query.count > 0 {
                 self.searchBooksViewModel.query = query
             }
         }

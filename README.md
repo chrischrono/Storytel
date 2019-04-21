@@ -20,7 +20,7 @@ To install the dependencies
 The app is currently able to Search Books from Storytel API, and show it in tableView.
 
 * When the app loads, it will Search the Books from Storytel API, and show them in the tableView
-* Upon selecting the Query header, it will open a dialog box to input a new query keyword, then it will try to refresh the list with related books based on the new query keyword.
+* Upon selecting the Query header, it will open a dialog box to input a new query, then it will try to refresh the list with related books based on the new query.
 
 ---
 # Development Steps
