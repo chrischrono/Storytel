@@ -180,10 +180,10 @@ extension SearchBooksViewController {
     }
     
     private func showEditSearchQuery() {
-        let alertController = UIAlertController(title: "New Query:", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "dialogbox_new_query_title".localized(), message: nil, preferredStyle: .alert)
         
         //the confirm action taking the inputs
-        let confirmAction = UIAlertAction(title: "Search", style: .default) { (_) in
+        let confirmAction = UIAlertAction(title: "general_search".localized(), style: .default) { (_) in
             
             //getting the input values from user
             let query = alertController.textFields?[0].text
@@ -193,11 +193,11 @@ extension SearchBooksViewController {
         }
         
         //the cancel action doing nothing
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        let cancelAction = UIAlertAction(title: "general_cancel".localized(), style: .cancel) { (_) in }
         
         //adding textfields to our dialog box
         alertController.addTextField { (textField) in
-            textField.placeholder = "Enter keyword"
+            textField.placeholder = "dialogbox_new_query_placeholder".localized()
         }
         
         //adding the action to dialogbox

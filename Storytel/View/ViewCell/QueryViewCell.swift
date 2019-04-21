@@ -24,7 +24,7 @@ class QueryViewCell: UITableViewCell {
     }
     
     func configureCell(query: String) {
-        queryLabel.text = "Query: \(query)"
+        queryLabel.text = "query_view_cell_query".localized() + query
     }
     
 }

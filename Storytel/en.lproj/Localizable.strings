@@ -17,5 +17,12 @@
 "network_no_response_object" = "No object return in the response.";
 "no_network_connection" = "Please check your internet connection!";
 
+"query_view_cell_query" = "Query: ";
 "book_view_cell_by" = "By: ";
 "book_view_cell_with" = "With: ";
+
+"dialogbox_new_query_title" = "New Query:";
+"dialogbox_new_query_placeholder" = "Enter keyword";
+
+"general_search" = "Search";
+"general_cancel" = "Cancel";
